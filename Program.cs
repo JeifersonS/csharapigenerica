@@ -2,7 +2,7 @@ using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using csharapigenerica.Services;
+using csharpapi.Services;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -52,10 +52,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api Generica C#");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api Genérica C#");
         c.RoutePrefix = "swagger";
     });
 }
+
 
 app.UseHttpsRedirection();
 
